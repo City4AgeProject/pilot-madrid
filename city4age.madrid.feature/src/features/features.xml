@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="universAAL-Feature" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+
+	<!-- Import universAAL Feature Repositories -->
+	<repository>mvn:org.universAAL/uAAL.karaf.feature/${uaal.version}/xml/features</repository>
+
+	<feature name="C4A-Madrid.vCard" description="vCard server."
+		version="${pom.version}" resolver='(obr)'>
+		<feature>uAAL-RI.Service.Gateway</feature> 
+		<bundle start-level='70' start='true'>mvn:es.upm.lst/city4age.madrid.vcard-server/${city4age.madrid.vcard-server.version}</bundle>
+	</feature>
+</features>

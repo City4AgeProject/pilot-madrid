@@ -31,13 +31,19 @@
   		<artifactId>mw.bus.service.core</artifactId>
   	</dependency>  	
   	<dependency>
-  		<groupId>org.universAAL.middleware</groupId>
-  		<artifactId>mw.bus.ui.core</artifactId>
-  	</dependency> 
+  		<groupId>org.universAAL.remote</groupId>
+  		<artifactId>ri.servicegateway</artifactId>
+  	</dependency>
   	<dependency>
   		<groupId>org.universAAL.ontology</groupId>
-  		<artifactId>ont.phWorld</artifactId>
+  		<artifactId>ont.profile</artifactId>
   	</dependency>
+    <dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>servlet-api</artifactId>
+	    <version>2.5</version>
+	    <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>

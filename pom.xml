@@ -13,7 +13,7 @@
   <name>City4Age Madrid Pilot</name>
   <description>A set of components that use the universAAL platform to form the Madrid local pilot server in City4Age.</description>
   <modules>
-
+    <module>city4age.madrid.vcard-server</module>
   </modules>
   <properties>
 	<uaal.version>3.4.0</uaal.version>

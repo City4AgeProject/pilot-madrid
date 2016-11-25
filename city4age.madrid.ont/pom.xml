@@ -3,11 +3,11 @@
   <parent>
     <artifactId>ont.pom</artifactId>
     <groupId>org.universAAL.ontology</groupId>
-    <version>3.0.0</version>
+    <version>3.4.1-SNAPSHOT</version>
     <relativePath>../ont.pom</relativePath>
   </parent>
   <groupId>org.universAAL.ontology</groupId>
-  <artifactId>org.universAAL.ontology.c4a</artifactId>
+  <artifactId>city4age.madrid.ont</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>C4A</name>
@@ -40,23 +40,6 @@
     <dependency>
       <groupId>org.universAAL.ontology</groupId>
       <artifactId>ont.phWorld</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.universAAL.ontology</groupId>
-      <artifactId>ont.device</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.universAAL.ontology</groupId>
-      <artifactId>ont.unit</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.universAAL.ontology</groupId>
-      <artifactId>ont.measurement</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.coode.owlapi</groupId>
-      <artifactId>owlapi</artifactId>
-      <version>3.3</version>
     </dependency>
   </dependencies>
   <repositories>

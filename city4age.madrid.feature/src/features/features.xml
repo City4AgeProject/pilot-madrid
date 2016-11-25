@@ -9,4 +9,10 @@
 		<feature>uAAL-RI.Service.Gateway</feature> 
 		<bundle start-level='70' start='true'>mvn:es.upm.lst/city4age.madrid.vcard-server/${city4age.madrid.vcard-server.version}</bundle>
 	</feature>
+	
+	<feature name="C4A-Madrid.ont" description="City 4 Age Ontology."
+		version="${pom.version}" resolver='(obr)'>
+		<feature>uAAL-MW</feature> 
+		<bundle start-level='62' start='true'>mvn:org.universAAL.ontology/city4age.madrid.ont/${city4age.madrid.ont.version}</bundle>
+	</feature>
 </features>

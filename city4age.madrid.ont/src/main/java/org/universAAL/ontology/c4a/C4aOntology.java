@@ -87,18 +87,22 @@ public final class C4aOntology extends Ontology {
     oci_Walking_stop.setResourceComment("");
     oci_Walking_stop.setResourceLabel("Walking_stop");
     oci_Walking_stop.addSuperClass(Walking.MY_URI); 
-
+    oci_Walking_stop.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.stop));
+    
     oci_Enter_home.setResourceComment("");
     oci_Enter_home.setResourceLabel("Enter_home");
-    oci_Enter_home.addSuperClass(IndoorHomeMonitoring.MY_URI); 
+    oci_Enter_home.addSuperClass(IndoorHomeMonitoring.MY_URI);
+    oci_Enter_home.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.start));
 
     oci_Exit_home.setResourceComment("");
     oci_Exit_home.setResourceLabel("Exit_home");
     oci_Exit_home.addSuperClass(IndoorHomeMonitoring.MY_URI); 
+    oci_Exit_home.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.stop));
 
     oci_Stay_stop.setResourceComment("");
     oci_Stay_stop.setResourceLabel("Stay_stop");
     oci_Stay_stop.addSuperClass(Stay.MY_URI); 
+    oci_Stay_stop.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.stop));
 
     oci_IndoorHomeMonitoring.setResourceComment("");
     oci_IndoorHomeMonitoring.setResourceLabel("IndoorHomeMonitoring");
@@ -111,6 +115,7 @@ public final class C4aOntology extends Ontology {
     oci_Stay_start.setResourceComment("");
     oci_Stay_start.setResourceLabel("Stay_start");
     oci_Stay_start.addSuperClass(Stay.MY_URI); 
+    oci_Stay_start.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.start));
 
     oci_LEA.setResourceComment("");
     oci_LEA.setResourceLabel("LEA");
@@ -135,6 +140,7 @@ public final class C4aOntology extends Ontology {
     oci_Walking_info.addRestriction(MergedRestriction
       .getAllValuesRestrictionWithCardinality(Walking_info.PROP_POSITION_ALT, 
           TypeMapper.getDatatypeURI(Long.class), 1, 1));
+    oci_Walking_info.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.info));
 
     oci_Walking.setResourceComment("");
     oci_Walking.setResourceLabel("Walking");
@@ -143,10 +149,12 @@ public final class C4aOntology extends Ontology {
     oci_Exit_Bus.setResourceComment("");
     oci_Exit_Bus.setResourceLabel("Exit_Bus");
     oci_Exit_Bus.addSuperClass(InterventionWithTransportation.MY_URI); 
+    oci_Exit_Bus.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.stop));
 
     oci_Walking_start.setResourceComment("");
     oci_Walking_start.setResourceLabel("Walking_start");
     oci_Walking_start.addSuperClass(Walking.MY_URI); 
+    oci_Walking_start.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.start));
 
     oci_BodyState.setResourceComment("");
     oci_BodyState.setResourceLabel("BodyState");

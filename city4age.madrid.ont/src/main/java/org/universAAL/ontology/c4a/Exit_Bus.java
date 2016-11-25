@@ -1,6 +1,5 @@
 package org.universAAL.ontology.c4a;
 
-import org.universAAL.middleware.owl.ManagedIndividual;
 
 
 /**

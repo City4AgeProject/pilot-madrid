@@ -1,30 +1,23 @@
 
 package org.universAAL.ontology.c4a;
 
-import org.universAAL.middleware.owl.IntRestriction;
-import org.universAAL.middleware.owl.FloatRestriction;
-import org.universAAL.middleware.owl.DoubleRestriction;
-import org.universAAL.middleware.owl.LongRestriction;
+import javax.xml.datatype.XMLGregorianCalendar;
+
 import org.universAAL.middleware.owl.DataRepOntology;
 import org.universAAL.middleware.owl.ManagedIndividual;
 import org.universAAL.middleware.owl.MergedRestriction;
 import org.universAAL.middleware.owl.OntClassInfoSetup;
 import org.universAAL.middleware.owl.Ontology;
+import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.TypeMapper;
+import org.universAAL.middleware.service.owl.Service;
 import org.universAAL.middleware.service.owl.ServiceBusOntology;
+import org.universAAL.ontology.C4aFactory;
 import org.universAAL.ontology.location.LocationOntology;
 import org.universAAL.ontology.phThing.PhThingOntology;
 import org.universAAL.ontology.shape.ShapeOntology;
 import org.universAAL.ontology.space.SpaceOntology;
-
-import javax.xml.datatype.XMLGregorianCalendar;
-import org.universAAL.middleware.owl.ManagedIndividual;
-import org.universAAL.middleware.service.owl.Service;
-import org.universAAL.middleware.rdf.Resource;
-
-
 //import the factory for this ontology
-import org.universAAL.ontology.C4aFactory;
 
 
 /**

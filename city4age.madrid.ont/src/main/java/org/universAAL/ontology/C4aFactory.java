@@ -1,27 +1,23 @@
 
 package org.universAAL.ontology;
 
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.ResourceFactory;
-
-
-import org.universAAL.ontology.c4a.Walking_stop;
+import org.universAAL.ontology.c4a.BodyState;
+import org.universAAL.ontology.c4a.Enter_Bus;
 import org.universAAL.ontology.c4a.Enter_home;
+import org.universAAL.ontology.c4a.Exit_Bus;
 import org.universAAL.ontology.c4a.Exit_home;
-import org.universAAL.ontology.c4a.Stay_stop;
 import org.universAAL.ontology.c4a.IndoorHomeMonitoring;
+import org.universAAL.ontology.c4a.InterventionWithTransportation;
+import org.universAAL.ontology.c4a.LEA;
 import org.universAAL.ontology.c4a.Stay;
 import org.universAAL.ontology.c4a.Stay_start;
-import org.universAAL.ontology.c4a.LEA;
-import org.universAAL.ontology.c4a.Walking_info;
+import org.universAAL.ontology.c4a.Stay_stop;
 import org.universAAL.ontology.c4a.Walking;
-import org.universAAL.ontology.c4a.Exit_Bus;
+import org.universAAL.ontology.c4a.Walking_info;
 import org.universAAL.ontology.c4a.Walking_start;
-import org.universAAL.ontology.c4a.BodyState;
-import org.universAAL.ontology.c4a.InterventionWithTransportation;
-import org.universAAL.ontology.c4a.Enter_Bus;
+import org.universAAL.ontology.c4a.Walking_stop;
 
 public class C4aFactory implements ResourceFactory {
 

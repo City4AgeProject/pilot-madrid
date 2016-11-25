@@ -133,13 +133,18 @@ public final class C4aOntology extends Ontology {
     oci_Walking_info.setResourceLabel("Walking_info");
     oci_Walking_info.addSuperClass(Walking.MY_URI); 
     oci_Walking_info.addDatatypeProperty(Walking_info.PROP_POSITION_LONG).setFunctional();
+    // @pabrilgimenez: is position_long the total distance wakled? why is it a Long? what units does it have?
     oci_Walking_info.addRestriction(MergedRestriction
       .getAllValuesRestrictionWithCardinality(Walking_info.PROP_POSITION_LONG, 
           TypeMapper.getDatatypeURI(Long.class), 1, 1));
+    // @pabrilgimenez: is position_alt the altitude difference wakled? why is it a Long? what units does it have?
     oci_Walking_info.addDatatypeProperty(Walking_info.PROP_POSITION_ALT).setFunctional();
     oci_Walking_info.addRestriction(MergedRestriction
       .getAllValuesRestrictionWithCardinality(Walking_info.PROP_POSITION_ALT, 
           TypeMapper.getDatatypeURI(Long.class), 1, 1));
+    // @pabrilgimenez: are long and alt reffering to longitude and latitude, as in GPS coordenates? are these both cumulative?
+    // because I would recommend to use Location (as a Point instance) https://github.com/universAAL/ontology/wiki/Physical-World
+    // maybe it would be interesting to have these properties as part of the walking class.
     oci_Walking_info.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.info));
 
     oci_Walking.setResourceComment("");

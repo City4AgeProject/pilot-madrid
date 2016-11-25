@@ -10,7 +10,7 @@
   <artifactId>city4age.madrid.ont</artifactId>
   <version>0.1.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>C4A</name>
+  <name>City4Age ontology</name>
   <dependencies>
     <dependency>
       <groupId>org.universAAL.support</groupId>

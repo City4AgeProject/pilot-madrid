@@ -6,8 +6,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.universAAL.middleware.owl.DataRepOntology;
 import org.universAAL.middleware.owl.ManagedIndividual;
 import org.universAAL.middleware.owl.MergedRestriction;
+import org.universAAL.middleware.owl.OntClassInfo;
 import org.universAAL.middleware.owl.OntClassInfoSetup;
 import org.universAAL.middleware.owl.Ontology;
+import org.universAAL.middleware.owl.OntologyManagement;
 import org.universAAL.middleware.rdf.Resource;
 import org.universAAL.middleware.rdf.TypeMapper;
 import org.universAAL.middleware.service.owl.Service;
@@ -15,6 +17,7 @@ import org.universAAL.middleware.service.owl.ServiceBusOntology;
 import org.universAAL.ontology.C4aFactory;
 import org.universAAL.ontology.location.LocationOntology;
 import org.universAAL.ontology.phThing.PhThingOntology;
+import org.universAAL.ontology.profile.User;
 import org.universAAL.ontology.shape.ShapeOntology;
 import org.universAAL.ontology.space.SpaceOntology;
 //import the factory for this ontology
@@ -30,6 +33,7 @@ public final class C4aOntology extends Ontology {
 
   private static C4aFactory factory = new C4aFactory();
   public static final String NAMESPACE ="http://ontology.universAAL.org/C4A#";
+  public static final String PROP_USER_ENACTS = NAMESPACE + "enactsAction";
 	
   public C4aOntology() {
     super(NAMESPACE);
@@ -110,7 +114,7 @@ public final class C4aOntology extends Ontology {
     oci_Stay_start.addSuperClass(Stay.MY_URI); 
     oci_Stay_start.addRestriction(MergedRestriction.getFixedValueRestriction(LEA.PROP_L_E_A_PHASE, LEA_phase.start));
 
-    oci_LEA.setResourceComment("");
+    oci_LEA.setResourceComment("Low Elementary Action");
     oci_LEA.setResourceLabel("LEA");
     oci_LEA.addSuperClass(Service.MY_URI); 
     oci_LEA.addObjectProperty(LEA.PROP_L_E_A_PHASE).setFunctional();
@@ -166,5 +170,11 @@ public final class C4aOntology extends Ontology {
     oci_Enter_Bus.setResourceLabel("Enter_Bus");
     oci_Enter_Bus.addSuperClass(InterventionWithTransportation.MY_URI); 
 
+    /* Extension of User */
+    OntClassInfoSetup oci_User = extendExistingOntClassInfo(User.MY_URI);
+    oci_User.addObjectProperty(PROP_USER_ENACTS);
+    oci_User.addRestriction(MergedRestriction.getAllValuesRestriction(PROP_USER_ENACTS, LEA.MY_URI));
+    
+    
   }
 }

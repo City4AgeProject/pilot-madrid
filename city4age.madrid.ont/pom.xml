@@ -13,17 +13,9 @@
   <name>City4Age ontology</name>
   <dependencies>
     <dependency>
-      <groupId>org.universAAL.support</groupId>
-      <artifactId>itests</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.osgi</groupId>
-      <artifactId>org.osgi.core</artifactId>
-      <version>4.1.0</version>
-    </dependency>
-    <dependency>
       <groupId>org.universAAL.middleware</groupId>
       <artifactId>mw.data.serialization.core</artifactId>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.universAAL.middleware</groupId>
@@ -40,6 +32,20 @@
     <dependency>
       <groupId>org.universAAL.ontology</groupId>
       <artifactId>ont.phWorld</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.ontology</groupId>
+      <artifactId>ont.profile</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.middleware</groupId>
+      <artifactId>mw.bus.context.core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.universAAL.middleware</groupId>
+      <artifactId>mw.bus.junit</artifactId>
+      <scope>test</scope>
     </dependency>
   </dependencies>
   <repositories>

@@ -60,7 +60,7 @@ public class SerializationTest extends BusTestCase {
 		ContextEventPattern cep = new ContextEventPattern();
 		cep.addRestriction(MergedRestriction.getAllValuesRestriction(ContextEvent.PROP_RDF_OBJECT, LEA.MY_URI));
 		
-		ContextProvider cp = new ContextProvider("http://eu.city4age.madrid/andorid#Publisher");
+		ContextProvider cp = new ContextProvider("http://eu.city4age.madrid/android#Publisher");
 		cp.setType(ContextProviderType.gauge);
 		cp.setProvidedEvents(new ContextEventPattern[] { cep});
 
